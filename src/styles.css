@@ -1,0 +1,133 @@
+@import "tailwindcss";
+@import "@fontsource/vazirmatn/arabic-400.css";
+@import "@fontsource/vazirmatn/arabic-500.css";
+@import "@fontsource/vazirmatn/arabic-700.css";
+@import "@fontsource/vazirmatn/latin-400.css";
+@import "@fontsource/markazi-text/arabic-500.css";
+@import "@fontsource/markazi-text/arabic-600.css";
+@import "@fontsource/markazi-text/arabic-700.css";
+@import "@fontsource/markazi-text/latin-500.css";
+
+@theme {
+  --font-sans: "Vazirmatn", "Noto Naskh Arabic", sans-serif;
+  --font-serif: "Markazi Text", "Noto Naskh Arabic", serif;
+  --color-paper: #f3ebdd;
+  --color-paper-2: #e8dcc9;
+  --color-ink: #1c1712;
+  --color-muted: #6e6458;
+  --color-line: #d4c6b2;
+  --color-oxblood: #7a2e2a;
+  --color-brass: #8c6a3e;
+  --color-soft: #f7f1e6;
+  --color-night: #14110e;
+}
+
+html[data-theme="night"] {
+  --color-paper: #14110e;
+  --color-paper-2: #221c17;
+  --color-ink: #f3ebdd;
+  --color-muted: #b7ab9b;
+  --color-line: #3a332c;
+  --color-oxblood: #e3b2a8;
+  --color-brass: #d4b483;
+  --color-soft: #1c1814;
+  --color-night: #0c0a08;
+}
+
+@layer base {
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  html {
+    background: var(--color-paper);
+    color: var(--color-ink);
+  }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background: color-mix(in srgb, var(--color-oxblood) 28%, transparent);
+  }
+}
+
+@utility book-body {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  line-height: 2.05;
+  letter-spacing: 0;
+}
+
+.reading {
+  font-size: var(--read-size, 1.35rem);
+  overflow-wrap: break-word;
+}
+
+.reading p {
+  margin: 0.85em 0;
+}
+
+.reading h2 {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 0.92em;
+  line-height: 1.7;
+  margin: 2.2em 0 0.6em;
+  color: var(--color-oxblood);
+}
+
+.dlg-label {
+  display: block;
+  margin-bottom: 0.15em;
+  font-family: var(--font-sans);
+  font-size: 0.68em;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  color: var(--color-brass);
+  line-height: 1.6;
+}
+
+.law-quote {
+  margin: 1.4em 0;
+  padding: 0.2em 1em 0.2em 0;
+  border-inline-start: 2px solid var(--color-oxblood);
+  color: var(--color-ink);
+}
+
+.endnote {
+  margin-top: 1.25rem;
+  padding: 1rem 1.1rem 0.4rem;
+  background: var(--color-soft);
+  border: 1px solid var(--color-line);
+}
+
+.endnote h3 {
+  margin: 0 0 0.45rem;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-oxblood);
+}
+
+.endnote li {
+  margin: 0.35rem 0 0.55rem;
+  padding-inline-start: 0.2rem;
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  line-height: 1.85;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    scroll-behavior: auto !important;
+    transition: none !important;
+  }
+}

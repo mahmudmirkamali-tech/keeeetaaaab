@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "از دادگستری تا دنیای دیجیتال",
+      "hasCanvas": false,
+      "bodyTextLen": 1283,
+      "bodyTextHash": "a0133dd1126b910b5186a8ba02a82a896a28891353e2e5088279b6b22d4679f2",
+      "bodyTextPrefix": "از دادگستری تا دنیای دیجیتال کتاب گفت‌وگو جلد کتاب یادداشت دربار",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "از دادگستری تا دنیای دیجیتال",
+      "hasCanvas": false,
+      "bodyTextLen": 533,
+      "bodyTextHash": "a7e541aba20fc44fe33893e76877638e659246f5ceaaa1728ab98f44ccb801d2",
+      "bodyTextPrefix": "از دادگستری تا دنیای دیجیتال کتاب گفت‌وگو گفت‌وگویی برای قضاوت د",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-preview.json"
+}
