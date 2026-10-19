@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { BookOpen, Moon, Search, Sun, Type, X } from "lucide-react";
+import { BookOpen, Code2, Crown, Gavel, Moon, Scale, Search, Sun, Type, X } from "lucide-react";
 import { bookSubtitle, bookTitle, chapterPlain, chapters, readingMinutes } from "@/content/book";
 import type { Block } from "@/content/types";
 
@@ -253,9 +253,24 @@ export function BookReader({
 function Cover({ resume, onChapter }: { resume: string | null; onChapter: (id: string) => void }) {
   const resumeChapter = chapters.find((c) => c.id === resume);
   return (
-    <div className="mx-auto max-w-xl py-6 sm:py-14">
-      <p className="font-sans text-sm text-brass">گفت‌وگویی برای قضاوت در عصر کد</p>
-      <h1 className="mt-4 font-serif text-5xl leading-tight font-semibold sm:text-6xl">{bookTitle}</h1>
+    <div className="mx-auto max-w-5xl py-4 sm:py-12">
+      <div className="cover-layout">
+        <div className="cover-art" aria-label="جلد کتاب با نماد ترازو، چکش قاضی، شاه و کد پرچم ایران">
+          <div className="cover-stripe cover-stripe-green" />
+          <div className="cover-stripe cover-stripe-white" />
+          <div className="cover-stripe cover-stripe-red" />
+          <div className="cover-code"><Code2 size={18} /> 01 · 10 · 1403</div>
+          <div className="cover-crown"><Crown size={34} strokeWidth={1.5} /></div>
+          <div className="cover-symbols">
+            <Scale size={112} strokeWidth={1.1} />
+            <Gavel className="cover-gavel" size={70} strokeWidth={1.25} />
+          </div>
+          <div className="cover-rule" />
+          <span className="cover-edition">روایت‌هایی از عدالت و فناوری</span>
+        </div>
+        <div className="cover-copy">
+          <p className="font-sans text-sm text-brass">گفت‌وگویی برای قضاوت در عصر کد</p>
+          <h1 className="mt-4 font-serif text-5xl leading-tight font-semibold sm:text-6xl">{bookTitle}</h1>
       <p className="book-body mt-6 text-2xl leading-relaxed text-ink">{bookSubtitle}</p>
       <div className="mt-8 h-px w-20 bg-oxblood" />
       <dl className="mt-6 space-y-3 font-sans text-sm">
@@ -292,6 +307,8 @@ function Cover({ resume, onChapter }: { resume: string | null; onChapter: (id: s
       <p className="mt-10 text-sm leading-7 text-muted">
         چهارده فصل، از برخورد عدالت با الگوریتم تا نقشه راه قانون‌گذاری. گفت‌وگوها بازآفرینی شده‌اند و هر جا نص قانون ساکت است، متن میان قانون، سند سیاستی و پیشنهاد نویسندگان فاصله گذاشته است.
       </p>
+        </div>
+      </div>
     </div>
   );
 }
